@@ -30,12 +30,9 @@ Home.getInitialProps = wrapper.getInitialPageProps(
   (store) => async () => {
     const { fetch: fetchState } = store.getState();
     if (fetchState.status === "idle") {
-      // await Fetch(
-      //   store.dispatch.bind(store),
-      //   "https://pokeapi.co/api/v2/pokemon/ditto"
-      // );
-      await store.dispatch(
-        fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+      await Fetch(
+        store.dispatch.bind(store),
+        "https://pokeapi.co/api/v2/pokemon/ditto"
       );
     }
   }
