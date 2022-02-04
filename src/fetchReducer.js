@@ -47,16 +47,6 @@ export default function reducer(
   { type, payload }
 ) {
   switch (type) {
-    // case HYDRATE: {
-    //   const { fetch } = payload;
-    //   if (!["loading", "idle"].includes(fetch.status)) {
-    //     return {
-    //       ...state,
-    //       ...fetch,
-    //     };
-    //   }
-    //   return state;
-    // }
     case FETCH: {
       return {
         ...state,
